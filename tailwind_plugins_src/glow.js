@@ -24,20 +24,10 @@ module.exports = plugin(function({
 }) {
   matchUtilities({
     "text-glow": (value) => {
-      // color = Object.keys(theme("colors")).some((v) => v == value) ? theme("colors")[value] : value
       color = getFromTWColor(value, theme("colors"));
       color = color ? color : value;
       return {
         textShadow: `0 0 1px #fff, 0 0 7px ${color}, 0 0 10px ${color}, 0 0 21px ${color}, 0 0 42px ${color}, 0 0 82px ${color}`
-      }
-      if (Object.keys(theme("colors")).some((v) => v == value)) {
-        return {
-          textShadow: `0 0 7px ${value}, 0 0 10px ${value}, 0 0 21px ${value}, 0 0 42px ${value}, 0 0 82px ${value}`
-        }
-      } else {
-        return {
-          textShadow: "sussy"
-        }
       }
     }
   })
