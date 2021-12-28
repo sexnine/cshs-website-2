@@ -1,6 +1,8 @@
 # cshs-website-2
 fuck you, i use vue when i want to
 
+see demo [here](https://cshs-website.web.app)
+
 ## Project setup
 Use nodejs 16
 ```
